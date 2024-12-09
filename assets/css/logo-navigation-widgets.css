@@ -1,0 +1,60 @@
+/* Wrapper container for logo-nav */
+.header-wrapper {
+    max-width: 1200px;  /* You can adjust this to any width you want */
+    width: 100%;
+    margin: 0 auto;  /* Centers the header */
+}
+
+/* Normal state (non-sticky) */
+.logo-nav {
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+/* Sticky header state */
+.logo-nav.sticky-header {
+    position: fixed;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    width: 100%; /* Prevent stretching beyond full width */
+    box-sizing: border-box; /* Ensure padding doesn't affect width calculation */
+    margin: 0 auto; /* Center the sticky header */
+}
+
+/* Optional: Add custom styles for logo-nav when sticky */
+.logo-nav.sticky-header {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for sticky effect */
+}
+
+/* Navigation links and logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navigation-links {
+    display: flex;
+    gap: 16px; /* Adjust spacing between links */
+}
+
+.nav-link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff6600;
+}

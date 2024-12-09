@@ -1,0 +1,100 @@
+/* Container for product categories */
+.product-categories-widget {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Each category item styling */
+.category-item {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Adjust width as needed */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth scale transition on hover */
+    margin-bottom: 20px;
+}
+
+/* Hover effect to scale the category item */
+.category-item:hover {
+    transform: scale(1.05);
+}
+
+/* Styling for the image element */
+.category-item .category-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+/* For the category-overlay with background image */
+.category-item.category-overlay .category-image {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+/* Title styling (for both default and overlay) */
+.category-title {
+    
+    position: absolute;
+    bottom: 20px; /* Adjust vertical positioning */
+    left: 20px;
+    right: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0; /* Hide title initially */
+    transition: opacity 0.3s ease; /* Smooth fade-in transition on hover */
+    z-index: 1;
+}
+
+
+/* Hover effect for showing text */
+.category-item:hover .category-image {
+    transform: scale(1.1); /* Zoom in image on hover */
+}
+
+.category-item:hover .category-title {
+    opacity: 1; /* Show the title text */
+}
+
+/* Styling for the Circular Display */
+.category-item.category-circular {
+    border-radius: 50%; /* Makes the item circular */
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    width: 200px; /* Adjust width */
+    height: 200px; /* Adjust height */
+}
+
+.category-item.category-circular .category-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%; /* Ensures the image is circular */
+}
+
+.category-item.category-circular .category-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+/* Hover effect for the Circular Display */
+.category-item.category-circular:hover .category-title {
+    opacity: 1;
+}
